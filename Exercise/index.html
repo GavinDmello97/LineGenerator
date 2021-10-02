@@ -132,7 +132,7 @@
             .attr("stroke-linejoin", "round")
             .attr("stroke-linecap", "round")
             .attr("fill", "none")
-            .attr("stroke", "lime")
+            .attr("stroke", "#c905fa")
             .attr("stroke-width", "2px");
           svg
             .append("path")
@@ -142,7 +142,7 @@
             .attr("stroke-linejoin", "round")
             .attr("stroke-linecap", "round")
             .attr("fill", "none")
-            .attr("stroke", "aqua")
+            .attr("stroke", "#077ff7")
             .attr("stroke-width", "2px");
 
           svg
@@ -153,7 +153,7 @@
             .attr("stroke-linejoin", "round")
             .attr("stroke-linecap", "round")
             .attr("fill", "none")
-            .attr("stroke", "pink")
+            .attr("stroke", "#07f733")
             .attr("stroke-width", "2px");
 
           svg
@@ -164,18 +164,19 @@
             .attr("stroke-linejoin", "round")
             .attr("stroke-linecap", "round")
             .attr("fill", "none")
-            .attr("stroke", "red")
+            .attr("stroke", "#fc8b0a")
             .attr("stroke-width", "2px");
 
           svg
             .append("g")
             .attr("transform", "translate(" + "0" + "," + height + ")")
-            .call(d3.axisBottom(x));
-
+            .call(d3.axisBottom(x))
+            .attr("stroke", "#d15249");
           svg
             .append("g")
             .attr("transform", "translate(" + margins + "," + "0" + ")")
-            .call(d3.axisLeft(y));
+            .call(d3.axisLeft(y))
+            .attr("stroke", "#bd111a");
         })
         .catch((error) => {
           let p = d3.select("body").append("p");
